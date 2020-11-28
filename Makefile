@@ -133,6 +133,7 @@ UPROGS=\
 	$U/_rm\
 	$U/_sh\
 	$U/_stressfs\
+	$U/_stressmem\
 	$U/_usertests\
 	$U/_grind\
 	$U/_wc\
