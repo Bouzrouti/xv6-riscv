@@ -10,6 +10,8 @@ struct spinlock {
   // For debugging:
   char *name;        // Name of lock.
   struct cpu *cpu;   // The cpu holding the lock.
+  uint64 num_acquires;
+  uint64 contention;
 };
 
 #endif

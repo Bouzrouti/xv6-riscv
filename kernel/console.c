@@ -21,6 +21,7 @@
 #include "riscv.h"
 #include "defs.h"
 #include "proc.h"
+#include "perf.h"
 
 #define BACKSPACE 0x100
 #define C(x)  ((x)-'@')  // Control-x
@@ -142,6 +143,9 @@ consoleintr(int c)
   switch(c){
   case C('P'):  // Print process list.
     procdump();
+    break;
+  case C('L'):
+    perf_print_spinlocks();
     break;
   case C('U'):  // Kill line.
     while(cons.e != cons.w &&
